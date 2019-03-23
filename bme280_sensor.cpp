@@ -104,6 +104,13 @@ uint32_t Bme280Sensor::GetHumidity() {
   return data_.humidity;
 }
 
+/*
+  i2c_read and i2c_write function below are directly copied from:
+  https://github.com/adafruit/Adafruit_BME680
+
+  Thanks Adafruit for their excellent products and code!
+*/
+
 int8_t i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data,
                 uint16_t len) {
 #ifdef BME280_DEBUG
@@ -139,11 +146,6 @@ int8_t i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data,
   return 0;
 }
 
-/**************************************************************************/
-/*!
-    @brief  Writes 8 bit values over I2C
-*/
-/**************************************************************************/
 int8_t i2c_write(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data,
                  uint16_t len) {
 #ifdef BME280_DEBUG
