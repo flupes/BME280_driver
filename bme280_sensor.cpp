@@ -34,7 +34,9 @@ bool Bme280Sensor::Begin() {
   int8_t rslt;
   bool ok = true;
   delay(5);  // sensor takes up to 2ms to start
+#ifdef BME280_DEBUG
   Serial.println("Bme280Sensor::Begin()");
+#endif
   Wire.begin();
   // Wire.setClock(400000);
   delay(5);
