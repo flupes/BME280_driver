@@ -1,5 +1,8 @@
 #include "bme280.h"
 
+#ifndef DIGIBARO_BME280_SENSOR_H
+#define DIGIBARO_BME280_SENSOR_H
+
 class Bme280Sensor {
  public:
   Bme280Sensor(uint8_t addr);
@@ -20,3 +23,5 @@ class Bme280Sensor {
   struct bme280_dev device_;
   struct bme280_data data_;
 };
+
+#endif
