@@ -1,4 +1,8 @@
 # BME280 sensor API
+
+**This is the BOSH BME280 code with the addition of a thin wrapper class, Arduino
+style, to interact easily with the sensor.**
+
 ## Introduction
 This package contains the Bosch Sensortec's BME280 pressure sensor driver (sensor API)
 
