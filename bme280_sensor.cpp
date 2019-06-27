@@ -50,7 +50,7 @@ bool Bme280Sensor::Begin() {
   print_rslt("bme280_init status", rslt);
 
   device_.settings.osr_h = BME280_OVERSAMPLING_1X;
-  device_.settings.osr_p = BME280_OVERSAMPLING_4X;
+  device_.settings.osr_p = BME280_OVERSAMPLING_2X;
   device_.settings.osr_t = BME280_OVERSAMPLING_2X;
   device_.settings.filter = BME280_FILTER_COEFF_2;
 
